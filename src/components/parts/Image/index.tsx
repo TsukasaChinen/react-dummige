@@ -1,29 +1,39 @@
+import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
+
+import { widthState, heightState, colorState } from "../../config/keys";
+import { Img } from "../../elements/Img";
 import { Spacer } from "../../elements/Spacer";
+import { BackgroundBox } from "../BackgroundBox";
 import style from "./image.module.css";
 
 export const Image: React.FC = () => {
+  const width = useRecoilValue(widthState);
+  const height = useRecoilValue(heightState);
+  const color = useRecoilValue(colorState);
+
+  const [href, setHref] = useState<string>(
+    `${process.env.REACT_APP_API_URL}?size=${width}x${height}&color=${
+      color ? color : "Not Set"
+    }`
+  );
+
+  useEffect(() => {
+    setHref(
+      `${process.env.REACT_APP_API_URL}?size=${width}x${height}&color=${
+        color ? color : "Not Set"
+      }`
+    );
+  }, [width, height, color]);
+
   return (
     <div className={style.wrapper}>
       <Spacer height={{ s: 20, m: 24 }} />
       <div className={style.image}>
-        <img
-          src="https://dummige.herokuapp.com/?size=500x280&color=116893"
-          alt="Created by Program"
-        />
+        <Img src={href} alt="" />
       </div>
       <Spacer height={{ s: 20, m: 24 }} />
-      <dl className={style.current}>
-        <dt>Image URL&nbsp;:&nbsp;</dt>
-        <dd className={style.url}>
-          <a
-            href="https://dummige.herokuapp.com/?size=500x280&color=116893"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://dummige.herokuapp.com/?size=500x280&color=116893"
-          </a>
-        </dd>
-      </dl>
+      <BackgroundBox text="Image URL" href={href} color="gray" />
     </div>
   );
 };

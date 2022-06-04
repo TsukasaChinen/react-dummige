@@ -1,17 +1,22 @@
+import { useRecoilValue } from "recoil";
+
+import { widthState, heightState, colorState } from "../../config/keys";
 import { Spacer } from "../../elements/Spacer";
-import style from "./tag.module.css";
+import { BackgroundBox } from "../BackgroundBox";
 
 export const Tag: React.FC = () => {
+  const width = useRecoilValue(widthState);
+  const height = useRecoilValue(heightState);
+  const color = useRecoilValue(colorState);
+
+  const src = `${process.env.REACT_APP_API_URL}?size=${width}x${height}&color=${
+    color ? color : "Not Set"
+  }`;
+
   return (
-    <div className={style.wrapper}>
+    <div>
       <Spacer height={{ s: 10 }} />
-      <dl className={style.current}>
-        <dt>Current Source&nbsp;:&nbsp;</dt>
-        <dd className={style.url}>
-          &lt;img
-          src="https://dummige.herokuapp.com/?size=500x280&color=116893"&gt;
-        </dd>
-      </dl>
+      <BackgroundBox text="Current Source" src={src} color="lightBlue" />
     </div>
   );
 };

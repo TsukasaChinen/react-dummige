@@ -6,24 +6,20 @@ export const Description: React.FC = () => {
     <div className={style.wrapper}>
       <Spacer height={{ s: 20, m: 28 }} />
       <p>
-        画像生成プログラム
+        画像生成API
         <a
           className={style.link}
-          href="https://dummige.herokuapp.com/"
+          href={process.env.REACT_APP_API_URL}
           target="_blank"
           rel="noreferrer"
         >
-          https://dummige.herokuapp.com/
+          {process.env.REACT_APP_API_URL}
         </a>
         の動作確認用ページです。
       </p>
-      <p>
-        上記のURLはクエリを追加することでサイズとカラーコードを指定し画像を生成できます。
-      </p>
+      <p>クエリにサイズとカラーコードを指定して画像を生成できます。</p>
       <Spacer height={{ s: 10, m: 20 }} />
-      <p className={style.notice}>
-        ※このページは動作確認のためフォームでサイズとカラーコードを設定できます。
-      </p>
+      <p className={style.notice}>※下記フォームからAPIの動作を確認できます。</p>
     </div>
   );
 };

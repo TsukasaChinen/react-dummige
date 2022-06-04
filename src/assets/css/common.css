@@ -158,6 +158,7 @@ input[type="number"] {
   --blue: #116893;
   --gray: #aaa;
   --red: #c01c1c;
+  --purple: #721393;
   --borderGray: #ddd;
 }
 
@@ -180,12 +181,12 @@ a {
   text-decoration: underline;
   color: var(--blue);
 }
-/* a:link,
-a:visited,
+a:visited {
+  color: var(--purple);
+}
 a:focus {
   text-decoration: none;
-  color: inherit;
-} */
+}
 input,
 select {
   font-size: 18px;
@@ -211,12 +212,14 @@ select {
 .contents {
   flex: 1;
 }
-
-@media (min-width: 550px) {
+.bgGray {
+  background: #f4f4f4;
 }
-@media (min-width: 768px) {
-}
-@media (min-width: 1040px) {
+.bgLightBlue {
+  background: #ecf6fb;
 }
 @media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+  }
 }

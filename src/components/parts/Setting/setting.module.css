@@ -9,7 +9,7 @@
 .label + .label {
   margin-top: 10px;
 }
-.labelText {
+.label span {
   width: var(--labelTextWidth);
   color: var(--gray);
 }

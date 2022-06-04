@@ -1,35 +1,8 @@
 .image {
-  max-width: 90vw;
-  max-height: 600px;
-  overflow: auto;
+  margin-inline: calc(50% - 50vw);
   text-align: center;
 }
 .image img {
   border: 1px solid var(--borderGray);
   border-radius: 5px;
-}
-.current {
-  font-size: 12px;
-  line-height: 1.5;
-  border: 1px solid var(--borderGray);
-  padding: 8px;
-  border-radius: 4px;
-  background: #f4f4f4;
-}
-.current dt {
-  color: #aaa;
-}
-@media (min-width: 768px) {
-  .current {
-    display: flex;
-    padding: 10px;
-  }
-  .current dt {
-    white-space: nowrap;
-  }
-}
-@media (min-width: 1000px) {
-  .current {
-    font-size: 14px;
-  }
 }

@@ -1,23 +1,42 @@
+import { useRecoilState } from "recoil";
+
+import { widthState, heightState, colorState } from "../../config/keys";
 import { Spacer } from "../../elements/Spacer";
+import { InputNumber } from "../../elements/InputNumber";
+import { InputText } from "../../elements/InputText";
+import { SettingLabel } from "./SettingLabel";
 import style from "./setting.module.css";
 
 export const Setting: React.FC = () => {
+  const [width, setWidth] = useRecoilState(widthState);
+  const [height, setheight] = useRecoilState(heightState);
+  const [color, setColor] = useRecoilState(colorState);
+
+  const handleChangeWidth = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setWidth(Number(e.target.value));
+  };
+
+  const handleChangeHeight = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setheight(Number(e.target.value));
+  };
+
+  const handleChangeColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setColor(e.target.value);
+  };
+
   return (
     <div className={style.wrapper}>
       <Spacer height={{ s: 10 }} />
       <div className={style.content}>
-        <label className={style.label}>
-          <span className={style.labelText}>Width</span>
-          <input type="number" value="500" />
-        </label>
-        <label className={style.label}>
-          <span className={style.labelText}>Height</span>
-          <input type="number" value="280" />
-        </label>
-        <label className={style.label}>
-          <span className={style.labelText}>Color</span>
-          <input type="text" value="116893" />
-        </label>
+        <SettingLabel className={style.label} text="width">
+          <InputNumber value={width} onChange={handleChangeWidth} />
+        </SettingLabel>
+        <SettingLabel className={style.label} text="Height">
+          <InputNumber value={height} onChange={handleChangeHeight} />
+        </SettingLabel>
+        <SettingLabel className={style.label} text="Color">
+          <InputText value={color} onChange={handleChangeColor} />
+        </SettingLabel>
       </div>
     </div>
   );
