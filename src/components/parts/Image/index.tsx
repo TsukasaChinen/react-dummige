@@ -30,7 +30,7 @@ export const Image: React.FC = () => {
     <div className={style.wrapper}>
       <Spacer height={{ s: 20, m: 24 }} />
       <div className={style.image}>
-        <Img src={href} alt="" />
+        <Img src={href} width={width} height={height} alt="" />
       </div>
       <Spacer height={{ s: 20, m: 24 }} />
       <BackgroundBox text="Image URL" href={href} color="gray" />
