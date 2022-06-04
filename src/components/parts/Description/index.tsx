@@ -6,7 +6,7 @@ export const Description: React.FC = () => {
     <div className={style.wrapper}>
       <Spacer height={{ s: 20, m: 28 }} />
       <p>
-        このページはGoで生成した画像生成プログラム
+        画像生成プログラム
         <a
           className={style.link}
           href="https://dummige.herokuapp.com/"
@@ -15,9 +15,15 @@ export const Description: React.FC = () => {
         >
           https://dummige.herokuapp.com/
         </a>
-        のデモサイトです。
+        の動作確認用ページです。
       </p>
-      <p>URLにクエリを追加することでサイズとカラーコードの指定ができます。</p>
+      <p>
+        上記のURLはクエリを追加することでサイズとカラーコードを指定し画像を生成できます。
+      </p>
+      <Spacer height={{ s: 10, m: 20 }} />
+      <p className={style.notice}>
+        ※このページは動作確認のためフォームでサイズとカラーコードを設定できます。
+      </p>
     </div>
   );
 };

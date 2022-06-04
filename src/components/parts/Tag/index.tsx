@@ -4,7 +4,7 @@ import style from "./tag.module.css";
 export const Tag: React.FC = () => {
   return (
     <div className={style.wrapper}>
-      <Spacer height={{ s: 10, m: 16 }} />
+      <Spacer height={{ s: 10 }} />
       <dl className={style.current}>
         <dt>Current Source&nbsp;:&nbsp;</dt>
         <dd className={style.url}>

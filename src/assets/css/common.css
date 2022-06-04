@@ -157,6 +157,7 @@ input[type="number"] {
 :root {
   --blue: #116893;
   --gray: #aaa;
+  --red: #c01c1c;
   --borderGray: #ddd;
 }
 

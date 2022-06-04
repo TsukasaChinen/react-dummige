@@ -4,7 +4,7 @@ import style from "./setting.module.css";
 export const Setting: React.FC = () => {
   return (
     <div className={style.wrapper}>
-      <Spacer height={{ s: 20, m: 28 }} />
+      <Spacer height={{ s: 10 }} />
       <div className={style.content}>
         <label className={style.label}>
           <span className={style.labelText}>Width</span>

@@ -4,11 +4,8 @@
 .link {
   margin-inline: 4px;
 }
-.source {
-  padding: 4px 8px;
-  background: #ddd;
-  border-radius: 4px;
-  margin-inline: 8px;
+.notice {
+  color: var(--red);
 }
 @media (min-width: 544px) {
   .wrapper {
