@@ -1,8 +1,12 @@
-.image {
+.imageWrapper {
+  display: flex;
+  justify-content: center;
   margin-inline: calc(50% - 50vw);
-  text-align: center;
 }
-.image img {
+.imageInner {
+  width: fit-content;
+}
+.imageInner img {
   border: 1px solid var(--borderGray);
   border-radius: 5px;
 }

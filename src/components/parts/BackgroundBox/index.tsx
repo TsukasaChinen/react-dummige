@@ -5,14 +5,22 @@ type Props = {
   href?: string;
   src?: string;
   color?: "gray" | "lightBlue";
+  loading?: boolean;
 };
 
-export const BackgroundBox: React.FC<Props> = ({ text, href, src, color }) => {
+export const BackgroundBox: React.FC<Props> = ({
+  text,
+  href,
+  src,
+  color,
+  loading,
+}) => {
   return (
     <dl
       className={`${style.current} ${
         color === "gray" ? "bgGray" : "bgLightBlue"
       }`}
+      data-loading={loading}
     >
       <dt>{text}&nbsp;:&nbsp;</dt>
       <dd className={style.url}>

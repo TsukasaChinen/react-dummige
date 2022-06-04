@@ -14,3 +14,8 @@ export const colorState = atom<string>({
   key: "colorState",
   default: "116893",
 });
+
+export const loadingState = atom<boolean>({
+  key: "loadingState",
+  default: true,
+});
