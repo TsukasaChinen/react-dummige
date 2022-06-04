@@ -1,0 +1,17 @@
+.wrapper p {
+  line-height: 1.8;
+}
+.link {
+  margin-inline: 4px;
+}
+.source {
+  padding: 4px 8px;
+  background: #ddd;
+  border-radius: 4px;
+  margin-inline: 8px;
+}
+@media (min-width: 544px) {
+  .wrapper {
+    text-align: center;
+  }
+}

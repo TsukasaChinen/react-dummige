@@ -1,0 +1,31 @@
+.image {
+  max-width: 90vw;
+  max-height: 600px;
+  overflow: auto;
+  text-align: center;
+}
+.current {
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid var(--borderGray);
+  padding: 8px;
+  border-radius: 6px;
+  background: #ecf6fb;
+}
+.current dt {
+  color: #aaa;
+}
+@media (min-width: 768px) {
+  .current {
+    display: flex;
+    padding: 10px;
+  }
+  .current dt {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1000px) {
+  .current {
+    font-size: 14px;
+  }
+}

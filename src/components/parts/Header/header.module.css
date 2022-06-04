@@ -1,0 +1,20 @@
+.wrapper {
+  --logoSize: 140px;
+  --headerPadding: 10px 0 14px;
+  display: flex;
+  justify-content: center;
+  padding: var(--headerPadding);
+  margin-inline: calc(50% - 50vw);
+  border-bottom: 1px solid var(--borderGray);
+}
+.link {
+  display: block;
+  width: var(--logoSize);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    --logoSize: 180px;
+    --headerPadding: 20px 0 22px;
+  }
+}
