@@ -1,8 +1,6 @@
-# dummige
+# DUMMIGE
 
-ダミー画像生成サービス [https://dummige.herokuapp.com/](https://dummige.herokuapp.com/) の説明用サイト。
-
-:link: [https://trylight.net/dummite/](https://trylight.net/dummite/)
+ダミー画像生成サービス [https://dummige.herokuapp.com/](https://dummige.herokuapp.com/) の説明用サイト
 
 ## Requirement
 
