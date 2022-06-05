@@ -4,17 +4,15 @@ type Props = {
   className?: string;
   text?: string;
   children: ReactNode;
-  loading?: boolean;
 };
 
 export const SettingLabel: React.FC<Props> = ({
   className,
   text,
   children,
-  loading,
 }) => {
   return (
-    <label className={className} data-loading={loading}>
+    <label className={className}>
       {text && <span>{text}</span>}
       {children}
     </label>

@@ -218,31 +218,6 @@ select {
 .bgLightBlue {
   background: #ecf6fb;
 }
-[data-loading="true"] {
-  background-image: linear-gradient(
-    90deg,
-    #eee 0,
-    #f3f3f3 10%,
-    #f3f3f3 20%,
-    #eee 30%
-  );
-  background-size: 400px 100%;
-  animation-name: skeleton;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-[data-loading="true"] * {
-  opacity: 0;
-}
-@keyframes skeleton {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 800px 0;
-  }
-}
 @media (hover: hover) {
   a:hover {
     text-decoration: none;
