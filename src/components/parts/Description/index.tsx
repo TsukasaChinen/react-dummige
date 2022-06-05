@@ -22,7 +22,7 @@ export const Description: React.FC = () => {
       </p>
       <Spacer height={{ s: 10, m: 20 }} />
       <p className={style.notice}>
-        <span>※下記フォームからAPIの動作を確認できます。</span>
+        <span>※下記フォームから動作を確認できます。</span>
       </p>
     </div>
   );
