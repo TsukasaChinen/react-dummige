@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
+import useMedia from "use-media";
 
 import { widthState, heightState, colorState } from "../../config/keys";
 import { Spacer } from "../../elements/Spacer";
@@ -11,6 +13,18 @@ export const Setting: React.FC = () => {
   const [width, setWidth] = useRecoilState(widthState);
   const [height, setheight] = useRecoilState(heightState);
   const [color, setColor] = useRecoilState(colorState);
+
+  const isSmall = useMedia({ minWidth: "520px" });
+
+  useEffect(() => {
+    if (isSmall) {
+      setWidth(500);
+      setheight(280);
+    } else {
+      setWidth(280);
+      setheight(156);
+    }
+  }, [isSmall, setWidth, setheight]);
 
   const handleChangeWidth = (e: React.ChangeEvent<HTMLInputElement>) => {
     setWidth(Number(e.target.value));
